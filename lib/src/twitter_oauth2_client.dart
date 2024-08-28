@@ -69,12 +69,12 @@ class _TwitterOAuth2Client implements TwitterOAuth2Client {
   }) async {
     final String codeVerifier = _generateSecureAlphaNumeric(80);
     final String codeChallenge = _generateCodeChallenge(codeVerifier);
-
+    print("kkkkkkkkk");
     final response = await _requestAuthorization(
       scopes: scopes,
       codeChallenge: codeChallenge,
     );
-    print("kkkkkkkkk $response");
+
 
     return await _requestAccessToken(
       code: response.code,

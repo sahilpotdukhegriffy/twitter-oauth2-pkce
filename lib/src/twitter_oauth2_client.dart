@@ -74,6 +74,7 @@ class _TwitterOAuth2Client implements TwitterOAuth2Client {
       scopes: scopes,
       codeChallenge: codeChallenge,
     );
+    print("kkkkkkkkk $response");
 
     return await _requestAccessToken(
       code: response.code,
